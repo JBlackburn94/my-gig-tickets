@@ -1,0 +1,54 @@
+{% extends "base.html" %} {% block content %}
+<div class="container">
+  <div class="row">
+    <h1 class="col s12 center-align main-logo">Add Event</h1>
+  </div>
+</div>
+
+<div class="row event-form">
+  <form class="col s12" method="POST" action="{{ url_for('add_event') }}">
+    <div class="row">
+      <div class="input-field col s6">
+        <input
+          placeholder="Placeholder"
+          id="event_name"
+          type="text"
+          class="validate"
+          name="event_name"
+          required
+        />
+        <label for="event_name">Event Name</label>
+      </div>
+      <div class="input-field col s6">
+        <input
+          id="venue_name"
+          name="venue_name"
+          type="text"
+          class="validate"
+          required
+        />
+        <label for="venue_name">Venue</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input
+          id="city_name"
+          name="city_name"
+          type="text"
+          class="validate"
+          required
+        />
+        <label for="city_name">City</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12 center-align">
+        <button class="btn-large event-button" type="submit">
+          Add Event <i class="fas fa-plus-square right"></i>
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+{% endblock %}

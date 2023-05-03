@@ -2,8 +2,14 @@
 
 <div class="container">
   <div class="row">
-    <h1 class="col s12 center-align main-logo">My Events</h1>
+    <h1 class="col s12 center-align main-logo">My Artists</h1>
   </div>
+  <div class="row">
+    <div class="col s12 center-align">
+        <a href="{{ url_for('add_artist') }}" class="btn-large event-button">
+            Add an artist <i class="fas fa-plus-square right"></i>
+        </a>
+    </div>
 </div>
 
 {% endblock %}

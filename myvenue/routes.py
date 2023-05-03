@@ -15,4 +15,9 @@ def my_events():
 
 @app.route("/add_artist", methods=["GET", "POST"])
 def add_artist():
+    if request.method == "POST":
+        artist = Artist(artist_name=request.form.get("artist_name"))
+        db.session.add(artist)
+        db.session.commit()
+        return redirect(url_for("my_events"))
     return render_template("add_artist.html")

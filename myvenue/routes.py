@@ -10,7 +10,8 @@ def home():
 
 @app.route("/my_events")
 def my_events():
-    return render_template("my_events.html")
+    events = list(Artist.query.order_by(Artist.artist_name).all())
+    return render_template("my_events.html", artist=events)
 
 
 @app.route("/add_artist", methods=["GET", "POST"])

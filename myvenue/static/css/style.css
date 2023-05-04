@@ -72,6 +72,10 @@ body {
   background-color: rgb(247, 117, 138);
 }
 
+.card-title {
+  text-transform: uppercase;
+}
+
 @media  screen and (max-width: 800px) {
   .hero-container {
     display: flex;

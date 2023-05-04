@@ -11,5 +11,20 @@
         </a>
     </div>
 </div>
+<div class="row">
+  {% for art in artist %}
+  <div class="col s12 m6 l3">
+    <div class="card center-align event-button">
+      <div class="card-content black-text">
+        <span class="card-title">{{ art.artist_name }}</span>
+      </div>
+      <div class="card-action">
+        <a class="white-text btn grey darken-3" href="#">Edit</a>
+        <a  class="white-text btn grey darken-3" href="#">Delete</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
 
 {% endblock %}

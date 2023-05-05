@@ -74,6 +74,8 @@ body {
 
 .card-title {
   text-transform: uppercase;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 @media  screen and (max-width: 800px) {

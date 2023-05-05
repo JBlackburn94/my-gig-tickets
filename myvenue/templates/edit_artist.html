@@ -1,0 +1,33 @@
+{% extends "base.html" %} {% block content %}
+<div class="container">
+  <div class="row">
+    <h1 class="col s12 center-align main-logo">Edit Artist</h1>
+  </div>
+</div>
+
+<div class="row event-form">
+  <form class="col s12" method="POST" action="{{ url_for('edit_artist', artist_id=art.id) }}">
+    <div class="row">
+      <div class="input-field col s12">
+        <input
+          placeholder="Placeholder"
+          id="artist_name"
+          type="text"
+          class="validate"
+          name="artist_name"
+          value="{{ art.artist_name }}"
+          required
+        />
+        <label for="artist_name">Artist Name</label>
+      </div>
+      
+    <div class="row">
+      <div class="col s12 center-align">
+        <button class="btn-large event-button" type="submit">
+          Edit <i class="fas fa-edit right"></i>
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+{% endblock %}

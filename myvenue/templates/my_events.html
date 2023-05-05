@@ -19,7 +19,7 @@
         <span class="card-title">{{ art.artist_name }}</span>
       </div>
       <div class="card-action">
-        <a class="white-text btn grey darken-3" href="#">Edit</a>
+        <a class="white-text btn grey darken-3" href="{{ url_for('edit_artist', artist_id=art.id) }}">Edit</a>
         <a  class="white-text btn grey darken-3" href="#">Delete</a>
       </div>
     </div>

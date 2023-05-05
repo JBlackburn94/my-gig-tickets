@@ -22,3 +22,13 @@ def add_artist():
         db.session.commit()
         return redirect(url_for("my_events"))
     return render_template("add_artist.html")
+
+
+@app.route("/edit_artist/<int:artist_id>", methods=["GET", "POST"])
+def edit_artist(artist_id):
+    art = Artist.query.get_or_404(artist_id)
+    if request.method == "POST":
+        art.artist_name = request.form.get("artist_name")
+        db.session.commit()
+        return redirect(url_for("my_events"))
+    return render_template("edit_artist.html", art=art)

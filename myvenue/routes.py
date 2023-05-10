@@ -32,3 +32,11 @@ def edit_artist(artist_id):
         db.session.commit()
         return redirect(url_for("my_events"))
     return render_template("edit_artist.html", art=art)
+
+
+@app.route("/delete_artist/<int:artist_id>")
+def delete_artist(artist_id):
+    art = Artist.query.get_or_404(artist_id)
+    db.session.delete(art)
+    db.session.commit()
+    return redirect(url_for("my_events"))

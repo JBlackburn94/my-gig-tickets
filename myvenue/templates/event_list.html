@@ -2,13 +2,13 @@
 
 <div class="container">
   <div class="row">
-    <h1 class="col s12 center-align main-logo">My Artists</h1>
-    <p class="col s12 center-align">This is a list of all the artists you've ever seen!</p>
+    <h1 class="col s12 center-align main-logo">My Events</h1>
+    <p class="col s12 center-align">This is a list of all the events you've ever been to!</p>
   </div>
   <div class="row">
     <div class="col s12 center-align">
-        <a href="{{ url_for('add_artist') }}" class="btn-large event-button">
-            Add an artist <i class="fas fa-plus-square right"></i>
+        <a href="{{ url_for('add_event') }}" class="btn-large event-button">
+            Add an event <i class="fas fa-plus-square right"></i>
         </a>
     </div>
 </div>
@@ -21,7 +21,7 @@
       </div>
       <div class="card-action">
         <a class="white-text btn grey darken-3" href="{{ url_for('edit_artist', artist_id=art.id) }}">Edit</a>
-        <a class="white-text btn grey darken-3" href="{{ url_for('delete_artist', artist_id=art.id) }}">Delete</a>
+        <a class="white-text btn grey darken-3 modal-trigger" href="{{ url_for('delete_artist', artist_id=art.id) }}">Delete</a>
       </div>
     </div>
   </div>

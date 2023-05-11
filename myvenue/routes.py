@@ -40,3 +40,25 @@ def delete_artist(artist_id):
     db.session.delete(art)
     db.session.commit()
     return redirect(url_for("my_events"))
+
+
+@app.route("/event_list")
+def event_list():
+    return render_template("event_list.html")
+
+
+@app.route("/add_event", methods=["GET", "POST"])
+def add_event():
+    events = list(Artist.query.order_by(Artist.artist_name).all())
+    if request.method == "POST":
+        event = Events(
+            event_name=request.form.get("event_name"),
+            venue_name=request.form.get("venue_name"),
+            city_name=request.form.get("city_name"),
+            date=request.form.get("date"),
+            event_id=request.form.get("event_id")
+        )
+        db.session.add(event)
+        db.session.commit()
+        return redirect(url_for("event_list"))
+    return render_template("add_event.html", events=events)

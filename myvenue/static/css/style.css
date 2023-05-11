@@ -64,7 +64,15 @@ body {
 }
 
 .event-form {
-  max-width: 75vw;
+  width: 75vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+
+.form-item {
+  margin-top: 2rem;
 }
 
 .event-button {

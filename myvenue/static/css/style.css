@@ -86,6 +86,14 @@ body {
   white-space: nowrap;
 }
 
+.event-item {
+  padding: 1.1rem;
+}
+
+.event-heading {
+  font-weight: bold;
+}
+
 @media  screen and (max-width: 800px) {
   .hero-container {
     display: flex;

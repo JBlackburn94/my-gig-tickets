@@ -44,7 +44,8 @@ def delete_artist(artist_id):
 
 @app.route("/event_list")
 def event_list():
-    return render_template("event_list.html")
+    events = list(Events.query.order_by(Events.id).all())
+    return render_template("event_list.html", events=events)
 
 
 @app.route("/add_event", methods=["GET", "POST"])

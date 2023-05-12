@@ -12,20 +12,22 @@
         </a>
     </div>
 </div>
-<div class="row">
-  {% for art in artist %}
-  <div class="col s12 m6 l3">
-    <div class="card center-align event-button">
-      <div class="card-content black-text">
-        <span class="card-title">{{ art.artist_name }}</span>
-      </div>
-      <div class="card-action">
-        <a class="white-text btn grey darken-3" href="{{ url_for('edit_artist', artist_id=art.id) }}">Edit</a>
-        <a class="white-text btn grey darken-3 modal-trigger" href="{{ url_for('delete_artist', artist_id=art.id) }}">Delete</a>
-      </div>
+
+<ul class="collapsible">
+  {% for event in events|sort(attribute="date") %}
+  <li>
+    <div class="collapsible-header">
+      <i class="fas fa-caret-down"></i>
+      <strong>{{ event.event_name}}</strong>: {{ event.date.strftime("%d %B,%Y") }}
     </div>
-  </div>
+    <div class="collapsible-body">
+      <div class="event-item"><div class="event-heading">Event/Artist Name: </div>{{ event.event_name }}</div>
+      <div class="event-item"><div class="event-heading">Venue Name: </div>{{ event.venue_name }}</div>
+      <div class="event-item"><div class="event-heading">Location: </div>{{ event.city_name }}</div>
+      <div class="event-item"><div class="event-heading">Date: </div>{{ event.date }}</div>
+    </div>
+  </li>
   {% endfor %}
-</div>
+</ul>
 
 {% endblock %}

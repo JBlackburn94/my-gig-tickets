@@ -1,4 +1,4 @@
-# Jason Blackburn - Milestone Project 2 Weather App
+# Jason Blackburn - Milestone Project 3 My Gig Tickets
 
 This site is to be used by the user to find out what the weather is in various locations around the globe.
 

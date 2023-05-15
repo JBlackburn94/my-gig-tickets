@@ -2,6 +2,7 @@
 <div class="container">
   <div class="row">
     <h1 class="col s12 center-align main-logo">Add an Event</h1>
+    <p class="col s12 center-align">To confirm your changes, please select the correct artist from the dropdown menu</p>
   </div>
 </div>
 
@@ -68,7 +69,11 @@
           <select name="event_id" id="event_id" class="validate" required>
             <option value="" disabled selected>Choose Artist</option>
             {% for event in events %}
+              {% if event == event.artist_name %}
+              <option value="{{ event.id }}" selected>{{ event.artist_name }}</option>
+              {% else %}
               <option value="{{ event.id }}">{{ event.artist_name }}</option>
+              {% endif %}
             {% endfor %}
           </select>
           <label for="event_id">Artist</label>

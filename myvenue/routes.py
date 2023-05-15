@@ -76,7 +76,7 @@ def edit_event(event_id):
         event.date = request.form.get("date")
         event.event_id = request.form.get("event_id")
         db.session.commit()
-        return redirect("event_list")
+        return redirect(url_for("event_list"))
     return render_template("edit_event.html", event=event, events=events)
 
 

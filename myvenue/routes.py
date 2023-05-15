@@ -63,3 +63,26 @@ def add_event():
         db.session.commit()
         return redirect(url_for("event_list"))
     return render_template("add_event.html", events=events)
+
+
+@app.route("/edit_event/<int:event_id>", methods=["GET", "POST"])
+def edit_event(event_id):
+    event = Events.query.get_or_404(event_id)
+    events = list(Artist.query.order_by(Artist.artist_name).all())
+    if request.method == "POST":
+        event.event_name = request.form.get("event_name")
+        event.venue_name = request.form.get("venue_name")
+        event.city_name = request.form.get("city_name")
+        event.date = request.form.get("date")
+        event.event_id = request.form.get("event_id")
+        db.session.commit()
+        return redirect("event_list")
+    return render_template("edit_event.html", event=event, events=events)
+
+
+@app.route("/delete_event/<int:event_id>")
+def delete_event(event_id):
+    event = Events.query.get_or_404(event_id)
+    db.session.delete(event)
+    db.session.commit()
+    return redirect(url_for("event_list"))

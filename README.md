@@ -1,108 +1,134 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Jason Blackburn - Milestone Project 2 Weather App
 
-Welcome Jason Blackburn,
+This site is to be used by the user to find out what the weather is in various locations around the globe.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+# Table of Contents
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+1. [Business](#business)
+2. [Colour Scheme](#color-scheme)
+3. [Wireframes](#wireframes)
+4. [Technologies Used](#technologies-used)
+5. [Testing](#testing)
+6. [Deployment](#deployment)
+7. [Credits](#credits)
+8. [Media](#media)
 
-## Gitpod Reminders
+# Business <a name="business"></a>
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+The business goal of this page is to allow users to upload the names of their favourite artists, which are then stored in a database. After this the user can then submit information about events they've seen and link the events to specific artists.
 
-`python3 -m http.server`
+## External Users Goals
 
-A blue button should appear to click: _Make Public_,
+The external users goals of this page are to provide a database for users to store information on events they've been to in the past. In the future I'd like to add a feature where you can upload images and videos to the events. I would also like to develop an account system where each list of artists and events would be stored in specific database for each account. 
 
-Another blue button should appear to click: _Open Browser_.
+## Site Owners Goals
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+The site owners goals of this page are to provide a platform for users to store past events to keep track of.
 
-A blue button should appear to click: _Make Public_,
+# Colour Scheme <a name="color-scheme"></a>
 
-Another blue button should appear to click: _Open Browser_.
+The site uses a fairly plain colour scheme with elements of bright colour to draw the user to certain features such as buttons. The main body is a slight grey colour whereas the header and footer are a darker grey. Most of the buttons feature a bright pink colour with a green colour on hover. 
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+## Font Family
 
-To log into the Heroku toolbelt CLI:
+![image](readMeImgs/Screenshot 2023-05-15 at 21.32.01.png)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+I have used a font from Google Fonts named Roboto.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+# Wireframes <a name="wireframes"></a>
 
-------
+I have made wire frames for desktop and mobile. These can be seen below. I've hidden the hero image on the mobile view to make the layout less busy on smaller screens.
 
-## Release History
+![image](<readMeImgs/Screenshot 2023-05-15 at 21.50.26.png>)
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+# Technologies Used <a name="technologies-used"></a>
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+During the build for this page I used:
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+[HTML](https://developer.mozilla.org/en-US/docs/Glossary/HTML5)
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+The project uses HTML to create the content.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+[CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+The project uses CSS to style some of the elements, and also makes some of the elements responsive.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+[JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+The project uses JavaScipt to make the project interactive.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+[Python](https://developer.mozilla.org/en-US/docs/Glossary/Python)
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+I used python as part of the backend.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+[Flask](https://flask.palletsprojects.com/en/2.3.x/)
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+I used Flask as a template language.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+[SQL](https://www.postgresql.org/)
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+I used PostgreSQL for my database creation.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+[Materialize](https://materializecss.com/)
 
-------
+I used Materialize as the framework to handle most of the CSS.
 
-## FAQ about the uptime script
+[GitHub](https://github.com/)
 
-**Why have you added this script?**
+Project Repository.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+VSCode
 
-**How will this affect me?**
+I used VS Code to build this project.
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+[Heroku](https://heroku.com)
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+I have used Heroku to deploy this project.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+Live Link: https://my-gig-tickets.herokuapp.com/
 
-**So….?**
+# Testing <a name="testing"></a>
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+“PLEASE NOTE - There is an error showing. The error claims that some external font/icon files have not been loaded. But having investigated this with my mentor, we can clearly see all items have loaded and this error is incorrect.”
 
-**Can I opt out?**
+This project was tested using:
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+[W3 HTML Validator](https://validator.w3.org/)
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+The W3 Schools HTML Validator - returning 0 errors (except those caused by Flask).
 
-**Anything more?**
+[W3 CSS Validator](https://jigsaw.w3.org/css-validator/)
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+The W3 Schools CSS Validator - returning 0 errors.
 
----
+[Google Chrome Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/)
 
-Happy coding!
+Google Chrome Lighthouse was used to score the performance and accesibility of this site.
+
+| User Story                                                                                              | User Case                                                                                                                                                      | Pass/Fail |     |     |
+| ------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | --- | --- |
+| User Story 001 - (Consumer) As a consumer I want to be able to easily add an artist.    | User case 001-001 Easily able to add an artist or event using the forms provided. Users are able to access the add artist form either by selecting the link on the navbar or by pressing the Start button.                        | Pass      |     |     |
+|                                                                                                            |     |     |
+| User Story 002 - (Consumer) As a consumer I want to be able to edit and delete my artists and events. | User case 002 - 001 The user is able to easily edit or delete both artists and events at the click of a button, the user can also delete all events that are linked to an artist with the use of the cascade property. | Pass      |     |     |
+
+# Deployment <a name="deployment"></a>
+
+GitPod -> GitHub -> Heroku
+
+## GitHub
+
+Create GitHub Repository using VS Code. Commited and pushed all content from VS Code to Github.
+
+## Heroku/ElephantSQL
+
+Completed site deployed to Heroku and the live database was created using ElephantSQL.
+
+# Credits <a name="credits"></a>
+
+[Stack Overflow](https://stackoverflow.com/)
+
+I used Stack Overflow to research fixes for some bugs.
+
+## Fonts
+
+[Roboto](https://fonts.google.com/specimen/Roboto)
